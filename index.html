@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgroGear — Demo Store</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#0d6efd;
+      --muted:#6c757d;
+      --glass: rgba(255,255,255,0.6);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    body{background:#f8f9fa;}
+    .navbar-brand{font-weight:700; letter-spacing:0.4px}
+    .hero{background:linear-gradient(90deg, rgba(13,110,253,0.12), rgba(13,110,253,0.02)); padding:80px 0}
+    .card-product img{height:180px; object-fit:cover}
+    .feature-icon{width:64px; height:64px; display:grid; place-items:center; border-radius:14px; background:var(--glass);}
+    .footer{background:#fff; border-top:1px solid #e9ecef;}
+    .badge-sale{position:absolute; top:12px; right:12px; background:#dc3545; color:#fff}
+    .floating-phone{position:fixed; right:20px; bottom:20px; z-index:1050}
+    @media (max-width:575px){ .hero{padding:40px 0} }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">AgroGear</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-outline-primary ms-lg-3" href="#contact">Enquire</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="display-6">Quality Agro Equipment — Demo Store</h1>
+        <p class="lead text-muted">A simple, clean sample website to showcase products. Perfect for GitHub Pages demos and showcasing in videos.</p>
+        <p>
+          <a href="#products" class="btn btn-primary btn-lg me-2">Browse Products</a>
+          <a href="#about" class="btn btn-outline-secondary btn-lg">Learn More</a>
+        </p>
+        <div class="d-flex gap-3 mt-4">
+          <div class="text-muted small">30+ products</div>
+          <div class="text-muted small">Free delivery over ₹5,000</div>
+          <div class="text-muted small">Secure payments</div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=66fdf7bb3b7f5d1d6f9f6b2b9f8420bb" alt="tractor" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="feature-icon mx-auto mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L6.5 10.793l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg></div>
+        <h5>Quality Assured</h5>
+        <p class="text-muted">Top-grade equipment sourced from trusted brands.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-icon mx-auto mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16"><path d="M5.5 9.4a.5.5 0 0 1 .5.5v.6a1.5 1.5 0 1 0 3 0v-.6a.5.5 0 0 1 1 0v.6A2.5 2.5 0 1 1 5 10.5v-.6a.5.5 0 0 1 .5-.5z"/><path d="M7.467.133 1 2.08v3.19c0 4.694 3.67 8.812 6.467 10.54 2.797-1.728 6.467-5.846 6.467-10.54V2.08L8.533.133a1 1 0 0 0-. 0z"/></svg></div>
+        <h5>Secure Checkout</h5>
+        <p class="text-muted">Safe payments and buyer protection for every order.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-icon mx-auto mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16"><path d="M11 1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM8 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg></div>
+        <h5>24/7 Support</h5>
+        <p class="text-muted">Reach us anytime — we reply within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="py-5 bg-white">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="mb-0">Featured Products</h3>
+      <div class="text-muted small">Showing 6 of 24</div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Product Card (repeat) -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-product shadow-sm position-relative">
+          <span class="badge badge-sale rounded-pill px-2">SALE</span>
+          <img src="https://share.google/dlUezzaqAa6Wj6Zl1" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Mini Harvester 2000</h5>
+            <p class="card-text text-muted small">Compact harvester for small farms.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <strong>₹12,499</strong>
+              <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate card instances for demo (copy/paste) -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-product shadow-sm">
+          <img src="https://images.unsplash.com/photo-1543168254-9ec6b3b2a2d7?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a9f5f8f8d5d2f3a6c5e0c1b2a1f4d7f" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Seed Drill Pro</h5>
+            <p class="card-text text-muted small">High-precision seeding machine.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <strong>₹7,999</strong>
+              <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-product shadow-sm">
+          <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=34c9f2b6e2d1c3b8f1f7b2a9b3c6d8e9" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Sprayer 3-in-1</h5>
+            <p class="card-text text-muted small">Versatile sprayer for crops and orchards.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <strong>₹3,499</strong>
+              <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- more demo cards -->
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-product shadow-sm">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Soil Tester X</h5>
+            <p class="card-text text-muted small">Easy digital soil analyser.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <strong>₹1,299</strong>
+              <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-product shadow-sm">
+          <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Irrigation Pump 5HP</h5>
+            <p class="card-text text-muted small">Reliable pump for field irrigation.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <strong>₹22,999</strong>
+              <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card card-product shadow-sm">
+          <img src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a" class="card-img-top" alt="product">
+          <div class="card-body">
+            <h5 class="card-title">Trailer Carrier</h5>
+            <p class="card-text text-muted small">Heavy duty trailer for transport.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <strong>₹18,499</strong>
+              <a href="#contact" class="btn btn-sm btn-primary">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h3>About AgroGear</h3>
+        <p class="text-muted">AgroGear is a demo store created to demonstrate a clean Bootstrap-based website ideal for showcasing products on GitHub Pages. The design is intentionally simple so you can customize and film a step-by-step deployment video.</p>
+        <ul>
+          <li>Static HTML + Bootstrap — zero server required</li>
+          <li>Easy to customize images and text</li>
+          <li>Ready for GitHub Pages deployment</li>
+        </ul>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e" class="img-fluid rounded shadow-sm" alt="about">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 bg-white">
+  <div class="container">
+    <h4>Contact Us</h4>
+    <p class="text-muted">Fill the form and we'll get back within 24 hours.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Your name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4" placeholder="How can we help?"></textarea>
+          </div>
+          <button class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h6>Visit</h6>
+        <p class="text-muted">Demo Address, Pune, India</p>
+        <h6>Phone</h6>
+        <p class="text-muted">+91 98765 43210</p>
+        <h6>Email</h6>
+        <p class="text-muted">info@agrogear-demo.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4">
+  <div class="container d-md-flex justify-content-between align-items-center">
+    <div class="text-muted small">© AgroGear Demo — 2025</div>
+    <div>
+      <a href="#" class="me-3 text-muted small">Privacy</a>
+      <a href="#" class="me-3 text-muted small">Terms</a>
+      <a href="#" class="text-muted small">Support</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating phone -->
+<a href="tel:+919876543210" class="btn btn-primary floating-phone rounded-circle shadow-lg" title="Call us">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 1 .737-.093l2.261 1.13c.329.165.445.564.265.872l-1.1 1.9a.678.678 0 0 0 .14.77l2.457 2.457a.678.678 0 0 0 .77.14l1.9-1.1c.308-.18.707-.064.872.265l1.13 2.262c.2.4.047.87-.36 1.041C12.5 15.41 6.59 13.41 3.01 9.83  -0.57 6.25 1.43.34 3.654 1.328z"/></svg>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
